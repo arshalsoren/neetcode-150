@@ -8,7 +8,9 @@ import (
 	"fmt"
 )
 
-func maxArea(height []int) int {
+type Solution struct{}
+
+func (s *Solution) maxArea(height []int) int {
 	if len(height) == 0 {
 		return 0
 	}
@@ -41,7 +43,9 @@ func max(a, b int) int {
 }
 
 func main() {
+	solution := &Solution{}
+
 	height := []int{1, 8, 6, 2, 5, 4, 8, 3, 7}
 	// Output: 49
-	fmt.Println(maxArea(height))
+	fmt.Printf("Test case 1: %v\n", solution.maxArea(height))
 }
